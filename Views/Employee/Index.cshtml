@@ -1,0 +1,72 @@
+﻿@model IEnumerable<Employee>
+
+    @*<a asp-action="Create">Buat Blog</a>*@
+
+    <div class="card">
+        <div class="card-header">
+            <h3 class="card-title">Data Karyawan Hotel</h3>
+        </div>
+        <div class="card-body">
+            <div id="example1_wrapper" class="dataTables_wrapper dt-bootstrap4">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <table  class="table table-bordered table-striped dataTable dtr-inline">
+                            <thead>
+                                <tr role="row">
+                                    <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-label="Rendering engine: activate to sort column ascending">
+                                        @Html.DisplayNameFor(model => model.Id)
+                                    </th>
+                                    <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-label="Browser: activate to sort column ascending">
+                                        @Html.DisplayNameFor(model => model.Nama)
+                                    </th>
+                                    <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-label="Platform(s): activate to sort column ascending" style="">
+                                        @Html.DisplayNameFor(model => model.Jabatan)
+                                    </th>
+                                    <th class="sorting sorting_asc" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-label="Engine version: activate to sort column descending" aria-sort="ascending" style="">
+                                        @Html.DisplayNameFor(model => model.Jk)
+                                    </th>
+                                    <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-label="CSS grade: activate to sort column ascending" style="">
+                                        @Html.DisplayNameFor(model => model.Alamat)
+                                    </th>
+                                    <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-label="CSS grade: activate to sort column ascending" style="">
+                                        @Html.DisplayNameFor(model => model.Email)
+                                    </th>
+                                    <th class="sorting" tabindex="0" aria-controls="example1" rowspan="1" colspan="1" aria-label="CSS grade: activate to sort column ascending" style="">
+                                        @Html.DisplayNameFor(model => model.NoTelp)
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var item in Model)
+                                {
+                                <tr class="odd">
+                                    <td class="dtr-control">
+                                        @Html.DisplayFor(modelItem => item.Id)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.Nama)
+                                    </td>
+                                    <td style="">
+                                        @Html.DisplayFor(modelItem => item.Jabatan)
+                                    </td>
+                                    <td class="sorting_1" style="">
+                                        @Html.DisplayFor(modelItem => item.Jk)
+                                    </td>
+                                    <td style="">
+                                        @Html.DisplayFor(modelItem => item.Alamat)
+                                    </td>
+                                    <td>
+                                        @Html.DisplayFor(modelItem => item.Email)
+                                    </td>
+                                    <td style="">
+                                        @Html.DisplayFor(modelItem => item.NoTelp)
+                                    </td>
+                                </tr>
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>

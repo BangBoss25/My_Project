@@ -1,0 +1,56 @@
+﻿@model Employee
+
+
+<div class="card">
+    <div class="card-header">
+        <h3 class="card-title">Add Data Karyawan</h3>
+    </div>
+    <div class="card-body">
+        <div id="example1_wrapper" class="dataTables_wrapper dt-bootstrap4">
+            <form asp-action="Create">
+                <div class="mb-3">
+                    <label asp-for="Nama" class="form-label">Nama Karyawan</label>
+                    <input asp-for="Nama" class="form-control" placeholder="Nama Lengkap">
+                </div>
+                <div class="mb-3">
+                    <label asp-for="Jk" class="form-label">Jenis Kelamin</label>
+                    <br />
+                    <div class="form-check form-check-inline">
+                        <input asp-for="Jk" class="form-check-input" type="radio" name="Jk" id="inlineRadio1" value="Laki-Laki">Laki-Laki
+                    </div>
+                    <div class="form-check form-check-inline">
+                        <input asp-for="Jk" class="form-check-input" type="radio" name="Jk" id="inlineRadio2" value="Perempuan">Perempuan
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <label asp-for="Jabatan" class="form-label">Jabatan Karyawan</label>
+                    <select asp-for="Jabatan" class="form-control" aria-label="Default select example">
+                        <option value="Laundry">Laundry</option>
+                        <option value="Receptionist">Receptionist</option>
+                        <option value="Waiter">Waiter</option>
+                        <option value="Bartender">Bartender</option>
+                        <option value="Steward">Steward</option>
+                        <option value="Cook">Cook</option>
+                    </select>
+                </div>
+                <div class="mb-3">
+                    <label asp-for="Alamat" class="form-label">Alamat</label>
+                    <input asp-for="Alamat" class="form-control" id="formGroupExampleInput" placeholder="Example input placeholder">
+                </div>
+                <div class="mb-3">
+                    <label asp-for="Email" class="form-label">E-Mail</label>
+                    <input asp-for="Email" type="email" class="form-control" id="formGroupExampleInput2" placeholder="Another input placeholder">
+                </div>
+                <div class="mb-3">
+                    <label asp-for="NoTelp" class="form-label">No. Telp</label>
+                    <input asp-for="NoTelp" class="form-control" id="formGroupExampleInput2" placeholder="Another input placeholder">
+                </div>
+                <div class="mb-3">
+                    <input class="btn btn-primary" type="submit" value="Create">
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+

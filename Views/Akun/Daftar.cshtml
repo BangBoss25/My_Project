@@ -1,0 +1,86 @@
+﻿@model User
+
+
+
+<div class="card">
+    <div class="card-header">
+        <h3 class="card-title">Add User Admin</h3>
+    </div>
+    <div class="card-body">
+        <div id="example1_wrapper" class="dataTables_wrapper dt-bootstrap4">
+            <form asp-action="Daftar">
+                <div class="mb-3">
+                    <label asp-for="Name" class="form-label">Name</label>
+                    <input class="form-control" asp-for="Name" placeholder="Name">
+                    <span asp-validation-for="Name" class="text-danger"></span>
+                </div>
+                <div class="mb-3">
+                    <label asp-for="Email" class="form-label">E-Mail</label>
+                    <input type="email" class="form-control" asp-for="Email" placeholder="Email">
+                    <span asp-validation-for="Email" class="text-danger"></span>
+                </div>
+                <div class="mb-3">
+                    <label asp-for="Username" class="form-label">Username</label>
+                    <input class="form-control" asp-for="Username" placeholder="Username">
+                    <span asp-validation-for="Username" class="text-danger"></span>
+                </div>
+                <div class="mb-3">
+                    <label asp-for="Password" class="form-label">Password</label>
+                    <input class="form-control" asp-for="Password" placeholder="Password">
+                    <span asp-validation-for="Password" class="text-danger"></span>
+                </div>
+                <div class="mb-3">
+                    <input class="btn btn-primary" type="submit" value="Create">
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+@*<form asp-action="Daftar">
+
+        <div class="input-group mb-3">
+            <input asp-for="Name" class="form-control" placeholder="Name" />
+            <div class="input-group-append">
+                <div class="input-group-text">
+                    <span class="fas fa-user"></span>
+                </div>
+            </div>
+        </div>
+        <div class="input-group mb-3">
+            <input asp-for="Email" type="email" class="form-control" placeholder="Email" />
+            <div class="input-group-append">
+                <div class="input-group-text">
+                    <span class="fas fa-envelope"></span>
+                </div>
+            </div>
+        </div>
+        <div class="input-group mb-3">
+            <input asp-for="Username" class="form-control" placeholder="Username" />
+            <div class="input-group-append">
+                <div class="input-group-text">
+                    <span class="fas fa-user"></span>
+                </div>
+            </div>
+        </div>
+        <div class="input-group mb-3">
+            <input asp-for="Password" type="password" class="form-control" placeholder="Password" />
+            <div class="input-group-append">
+                <div class="input-group-text">
+                    <span class="fas fa-lock"></span>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-8">
+                <div class="icheck-primary">
+                    <p>Sudah Punya Akun ? <a asp-action="Daftar">Masuk</a></p>
+                </div>
+            </div>
+            <div class="col-4">
+                <button type="submit" class="btn btn-primary btn-block">Register</button>
+            </div>
+        </div>
+
+    </form>*@
