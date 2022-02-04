@@ -108,5 +108,12 @@ namespace My_Project.Controllers
 
             return View(pengguna);
         }
+
+        public async Task<IActionResult> Logout()
+        {
+            await HttpContext.SignOutAsync();
+
+            return Redirect("/");
+        }
     }
 }

@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using My_Project.Data;
 using My_Project.Models;
 using System;
@@ -8,6 +9,7 @@ using System.Threading.Tasks;
 
 namespace My_Project.Controllers
 {
+    [Authorize]
     public class EmployeeController : Controller
     {
         private readonly AppDbContext _context;
@@ -16,13 +18,14 @@ namespace My_Project.Controllers
         {
             _context = context;
         }
-        public IActionResult Index()
+
+        public IActionResult DataKaryawan()
         {
             var data = _context.Tb_Employees.ToList();
             return View(data);
         }
 
-        public IActionResult DataKaryawan()
+        public IActionResult Index()
         {
             var data = _context.Tb_Employees.ToList();
             return View(data);
